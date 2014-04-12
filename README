@@ -1,0 +1,1 @@
+This is a small application, using python with a cocoa interface (via pyobjc). It reads the Pitchfork Best New Album RSS feed, checks to see which albums are in your iTunes library, and allows you to play them from the app.
