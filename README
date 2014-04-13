@@ -1,1 +1,12 @@
-This is a small application, using python with a cocoa interface (via pyobjc). It reads the Pitchfork Best New Album RSS feed, checks to see which albums are in your iTunes library, and allows you to play them from the app.
+This is a small application, using python with a cocoa interface (via pyobjc).
+It reads the Pitchfork Best New Album RSS feed, checks to see which albums are in your iTunes library, and allows you to play them from the app.
+
+REQUIRES: Python 3, pyobjc 3.0.x, beautiful soup 4, python feed reader
+
+File overview:
+MainMenu.xib - cocoa interface builder .xib file
+PfkBNMController.py - communicates between View (MainMenu.xib) and Model (PfkBNMModel.py)
+PfkBNMModel.py - serves as data model, builds and updates instances of Pfk & iTunes library objects
+pitchfork_module.py - handles parsing of RSS feed, stores contents of feed as a nested dictionary object
+itunes_lib.py - handles parsing of user iTunes library, stores contents as a nested dictionary object
+itunes_controller.py - python script to tell iTunes to play a given album/artist
